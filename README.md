@@ -14,3 +14,6 @@ for experiment :
 docker exec -it kafka_kafka1_1 kafka-topics --zookeeper zookeeper:2181 --create --topic my-topic2 --partitions 2 --replication-factor 3
 
 docker exec -it kafka_kafka1_1 kafka-topics --zookeeper zookeeper:2181 --create --topic my-topic10 --partitions 10 --replication-factor 3
+
+
+to experiment with different num of consumers/producers we should run k_consumer.py/k_producer.py files in few different terminals
