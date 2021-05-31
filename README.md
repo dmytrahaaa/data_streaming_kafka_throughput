@@ -10,5 +10,7 @@ docker exec -it kafka_kafka1_1 kafka-topics --zookeeper zookeeper:2181 --create 
 4) run : python k_logs.py -- read csv file and draw graphic for latency of message processing -- save picture
 
 for experiment : 
+
 docker exec -it kafka_kafka1_1 kafka-topics --zookeeper zookeeper:2181 --create --topic my-topic2 --partitions 2 --replication-factor 1
+
 docker exec -it kafka_kafka1_1 kafka-topics --zookeeper zookeeper:2181 --create --topic my-topic10 --partitions 10 --replication-factor 1
