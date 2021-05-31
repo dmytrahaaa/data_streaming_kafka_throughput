@@ -3,6 +3,7 @@
 1) create kafka topic:
 
 docker-compose up
+
 docker exec -it kafka_kafka1_1 kafka-topics --zookeeper zookeeper:2181 --create --topic my-topic --partitions 1 --replication-factor 3
 
 2) run : python k_producer.py -- get reddit data and produce it to kafka topic
