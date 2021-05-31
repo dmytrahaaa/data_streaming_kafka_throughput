@@ -3,7 +3,7 @@
 1) create kafka topic:
 
 docker-compose up
-docker exec -it kafka_kafka1_1 kafka-topics --zookeeper zookeeper:2181 --create --topic my-topic --partitions 1 --replication-factor 1
+docker exec -it kafka_kafka1_1 kafka-topics --zookeeper zookeeper:2181 --create --topic my-topic --partitions 1 --replication-factor 3
 
 2) run : python k_producer.py -- get reddit data and produce it to kafka topic
 3) run : python k_consumer.py -- get data from kafka topic and write timestamps to csv file
@@ -11,6 +11,6 @@ docker exec -it kafka_kafka1_1 kafka-topics --zookeeper zookeeper:2181 --create 
 
 for experiment : 
 
-docker exec -it kafka_kafka1_1 kafka-topics --zookeeper zookeeper:2181 --create --topic my-topic2 --partitions 2 --replication-factor 1
+docker exec -it kafka_kafka1_1 kafka-topics --zookeeper zookeeper:2181 --create --topic my-topic2 --partitions 2 --replication-factor 3
 
-docker exec -it kafka_kafka1_1 kafka-topics --zookeeper zookeeper:2181 --create --topic my-topic10 --partitions 10 --replication-factor 1
+docker exec -it kafka_kafka1_1 kafka-topics --zookeeper zookeeper:2181 --create --topic my-topic10 --partitions 10 --replication-factor 3
